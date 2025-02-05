@@ -46,7 +46,7 @@ public class SubClass extends SuperClass {
     protected void protectedMethod() {}
     // public void protectedMethod() {} => 더 큰 범위로 접근 제어자를 바꾸는 건 성립
 
-    /* 설명. 다른 패키지가 되면 오버라이딩 불가 */
+    /* 설명. default 접근자일 때, 다른 패키지가 되면 오버라이딩 불가 */
     // @Override
     // void defaultMethod() {}
 

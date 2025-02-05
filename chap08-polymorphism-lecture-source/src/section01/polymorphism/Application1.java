@@ -27,7 +27,7 @@ public class Application1 {
         rabbit.jump();
 
         Animal an1 = new Animal(); // 같은 타입이기 때문에, 다형성이 아님
-        Animal an2 = new Tiger();  // 다형성
+        Animal an2 = new Tiger();  // 다형성. Tiger 객체를 생성하고, 이를 Animal 타입의 변수에 넣음. tiger 객체를 animal 타입으로 참조.
         Animal an3 = new Rabbit(); // 다형성
 
         /* 설명. Animal은 Tiger나 Rabbit이 아니다 (두 타입을 지니고 있지 않다)*/
@@ -35,7 +35,7 @@ public class Application1 {
 
 
         /* 설명. 동적 바인딩 확인하기
-        *   컴파일 당시에는 해당 타입의 메소드와 연결되어 있다가
+        *   컴파일 당시에는 해당 타입의 메소드와 연결되어 있다가 (정적 바인딩)
         *   런타임 당시 실제 객체가 가진 오버라이딩 된 메소드로 바인딩 되어 바뀌어 동작하는 것을 의미힌다.
         *   (동적 바인딩의 조건 : 상속, 다형성, 오버라이딩)
         * */
