@@ -14,6 +14,7 @@ public class Application2 {
         char c = "abc".charAt(0); // Character는 메소드가 제공되지 않아 String의 charAt()을 활용
 
         /* 설명. 코테 풀때는 parse를 쓰는게 속도가 미흡하지만 더 빠를 수 있다.. */
+        /* 설명. 반환형은 기본자료형이라 오토박싱을 사용*/
         byte b2 = Byte.parseByte("1");
         short s2 = Short.parseShort("2");
         int i2 = Integer.parseInt("4"); // 얘는 parseInteger 가 아니라 pareInt 로 써야함

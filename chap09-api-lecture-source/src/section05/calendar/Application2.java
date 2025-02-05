@@ -62,7 +62,6 @@ public class Application2 {
         String birthDayString = sdf.format(new java.util.Date(birthday.getTimeInMillis()));
         System.out.println("birthDayString = " + birthDayString);
 
-
     }
 
 }
