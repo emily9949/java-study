@@ -27,7 +27,7 @@ public class Application1 {
 
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println("파일 경로 잘 확인할 것");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {

@@ -4,6 +4,8 @@ import com.sumin.section02.userexception.exception.MoneyNegativeException;
 import com.sumin.section02.userexception.exception.NotEnoughMoneyException;
 import com.sumin.section02.userexception.exception.PriceNegativeException;
 
+
+/* 설명. 직접 만든 예외처리의 경우 메소드 헤더에 throws 를 안 넣어주면 오류가 난다. */
 public class ExceptionTest {
     public void checkEnoughMoney(int price, int money) throws PriceNegativeException, MoneyNegativeException, NotEnoughMoneyException {
         if (price < 0) {
