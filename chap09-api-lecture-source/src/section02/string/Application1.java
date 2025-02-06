@@ -14,10 +14,10 @@ public class Application1 {
 
         /* 목차. 2. compareTo() */
         String str2 = "java";
-        String str3 = "java";
+        String str3 = "jbva";
         String str4 = "JAVA";
         String str5 = "mariaDB";
-        System.out.println(str2.compareTo(str3)); // str2 에서 str3의 유니코드 수를 (-) 함.
+        System.out.println(str2.compareTo(str3)); // str2 에서 str3의 유니코드 수를 (-) 함. 문자열의 첫 인덱스부터 순서대로 비교. 같을때 (-) 차를 출력함.
         System.out.println(str4.compareTo(str2));
         System.out.println(str2.compareTo(str3));
         System.out.println(str2.compareTo(str5));
@@ -30,7 +30,8 @@ public class Application1 {
         String indexOf = "java mariaDB";
         System.out.println("indexOf('a'): " + indexOf.indexOf("a")); // 1
         System.out.println("indexOf('z'): " + indexOf.indexOf("z")); // -1
-        System.out.println("indexOf('ava'): " + indexOf.indexOf("ava"));  // 1으로 출력 (a로인식)
+        System.out.println("indexOf('ava'): " + indexOf.indexOf("ava"));  // 문자열도 가능함. 문자열의 시작 인덱스를 출력해줌
+        System.out.println("indexOf('ava'): " + indexOf.indexOf("av2")); // -1
 
         /* 목차. 5. trim() 공백 제거*/
         String trimStr = "  java   ";
@@ -58,7 +59,7 @@ public class Application1 {
         System.out.println("빈 문자열의 길이: " + "".length());
 
         /* 목차. 10. isEmpty() */
-        System.out.println("isEmpty(): " + "".isEmpty());
-        System.out.println("isEmpty(): " + "abc".isEmpty());
+        System.out.println("isEmpty(): " + "".isEmpty()); // true
+        System.out.println("isEmpty(): " + "abc".isEmpty()); // false
     }
 }

@@ -3,6 +3,7 @@ package section04.wrapper;
 public class Application3 {
     public static void main(String[] args) {
 
+        // 각각의 기본형(primitive type) 값을 Wrapper 클래스로 변환한 후, 문자열로 변환
         String b = Byte.valueOf((byte)1).toString();
         String s = Short.valueOf((short)2).toString();
         String i = Integer.valueOf(4).toString();
