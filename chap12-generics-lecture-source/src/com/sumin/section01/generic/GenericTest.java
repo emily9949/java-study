@@ -4,8 +4,8 @@ package com.sumin.section01.generic;
 *  제네릭 클래스의 다이아몬드 연산자(<>)에 들어갈 수 있는 4가지 타입
 *  1. E : Element
 *  2. T : Type (상위 개념)
-*  3. K : Key
-*  4. V : Value
+*  3. K : Key (자료형)
+*  4. V : Value (
 * */
 
 public class GenericTest<T> {

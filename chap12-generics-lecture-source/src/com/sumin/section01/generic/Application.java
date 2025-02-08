@@ -19,14 +19,15 @@ public class Application {
         mgt.setValue(new Date());
 
         // 3.14가 autoboxing 을 거쳐 Wrapper 클래스의 Double 객체가 됨
+        // (MyGenericTest 에서 Object 객체로 받아오기 때문)
         System.out.println(mgt.getValue().toString());
 
         // Object 형을 Double 형으로 다운캐스팅. 다운캐스팅을 할 때 autounboxing 이 일어남.
-        double dNum = (Double) mgt.getValue(); // 컴파일 에러가 아닌 런타임 에러가 발생하는 위험한 구
+        double dNum = (Double) mgt.getValue(); // 컴파일 에러가 아닌 런타임 에러가 발생하는 위험한 구문
 
         GenericTest<Integer> gt1 = new GenericTest<Integer>();
         gt1.getValue(); // <> 안의 참조자료형을 자동 반환하게 됨. 여기서는 Integer 타입으로 가져옴.
-        gt1.setValue(1); // 타입의 안정성이 높다! (<> 안에 참조자료형을 위반하지 않는다.
+        gt1.setValue(1); // 타입의 안정성이 높다! <> 안에 참조자료형을 위반하지 않는다.
 
         /* 설명.
          *    제네릭 클래스는 다양한 자료형으로 변할 수 있어 클래스 하나만으로 활용가치가 높아진다 (구현의 편의성)
