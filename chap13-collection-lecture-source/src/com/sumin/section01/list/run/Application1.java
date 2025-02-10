@@ -1,7 +1,6 @@
 package com.sumin.section01.list.run;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Application1 {
     public static void main(String[] args) {
@@ -62,6 +61,41 @@ public class Application1 {
         /* 설명. 2번째 위치에 7을 추가해 (기존 배열 크기 +1)이 되는 코드 작성 [1,7,2,3,4,5]*/
         int[] newIntArr = new int[intArr.length + 1];
         System.arraycopy(intArr, 1, newIntArr, 2, 4);
+
+        /* 설명. ArrayList를 활용한 정렬 */
+        /* 목차. 1. 문자열 데이터 정렬 (feat. 오름차순) */
+
+        /* 설명. List 로 다형성을 적용하는 이유
+        *      객체 생성할 때 ArrayList, LinkedList 등 다른 타입으로 바꿔도 오류가 안남
+        *   -> 타입 은닉화 기술 (해당 타입인 걸 숨기고 List 타입으로 작성) */
+        List<String> stringList = new LinkedList<>(); // 내림차순 할 때는 LinkedList 로 변경해야함
+//        List<String> stringList = new ArrayList<>();
+        stringList.add("apple");
+        stringList.add("banana");
+        stringList.add("mango");
+        stringList.add("grape");
+
+        System.out.println("문자열 데이터: " + stringList);
+
+        /* 설명. 실제로는 ArrayList 안에 있는 데이터인 String에 정의된 기준(오름차순)대로 정렬 됨*/
+        Collections.sort(stringList);
+        System.out.println("정렬된 문자열 데이터: " + stringList);
+
+        /* 목차. 1-1. 문자열 데이터 내림차순 정렬 */
+        /* 설명. ArrayList 와 LinkedList 는 부모/자식 관계가 아니라 형제이기 때문에 형변환이 불가. */
+        /* 설명. 다루는 Iterator 와 해당 컬렉션의 제네릭 타입은 웬만하면 꼭 명시하자 (feat. 다운 캐스팅 방지(타입안정성))*/
+        Iterator<String> iter = ((LinkedList<String>) stringList).descendingIterator();
+        // Iterator 를 LinkedList 로 변환해서 해당 컬렉션에서 제공하는 메소드 사용.
+        while (iter.hasNext()) {
+            System.out.println(iter.next());
+        }
+
+        /* 설명. <> 안을 안 써주면, Object 로 반환되기 때문에 출력할 때 (String)으로 형 변환 해주어야함. */
+//        Iterator iter = ((LinkedList) stringList).descendingIterator();
+//        // Iterator 를 LinkedList 로 변환해서 해당 컬렉션에서 제공하는 메소드 사용.
+//        while (iter.hasNext()) {
+//            System.out.println((String) iter.next());
+//        }
 
 
     }
