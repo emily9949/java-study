@@ -25,6 +25,8 @@ public class Application2 {
 
         // compareTo 를 활용해 price 를 기준으로 정렬이 됨
         Collections.sort(booklist);
+
+        /* 설명. List 계열도 sort 메소드를 쓸 수 있는데 Comparator 를 구현한 클래스의 객체만 넘겨주면 된다 */
         Collections.sort(booklist, new AscendingPrice()); // AscendingPrice 객체를 기준으로 추가 정렬
 
         for (BookDTO bookDTO : booklist) {
@@ -33,6 +35,7 @@ public class Application2 {
 
         for (int i = 0; i < booklist.size(); i++) { // 컬렉션은 size() 를 통해서 크기를 구함
             System.out.println(booklist.get(i));
+
         }
     }
 
