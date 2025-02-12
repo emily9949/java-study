@@ -24,6 +24,8 @@ public class Application2 {
 
         System.out.println("prop = " + prop);
 
+        // setProperty : 저장된 키와 값을 Properties 객체에 저장
+        // store : Properties 객체에 저장된 키-값 쌍을 출력 스트림에 저장. (여기서는 파일로 저장)
         try {
             prop.store(new FileOutputStream("driver.dat"), "jdbc driver");
             prop.storeToXML(new FileOutputStream("driver.xml"), "jdbc driver xml version");
@@ -32,6 +34,8 @@ public class Application2 {
         }
 
         /* 설명. 방금 출력으로 내보낸 파일을 읽어와서 새로운 Properties 에 담아보자 */
+        // load : Properties 저장 파일을 읽어와 객체에 데이터를 불러오는 것
+        // getProperty : 특정 키의 값을 가져오는 메소드
         Properties prop2 = new Properties();
         System.out.println("읽어오기 전: " + prop2);
 

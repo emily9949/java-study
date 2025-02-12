@@ -1,4 +1,4 @@
-package com.sumin.sectio02.enumtype;
+package com.sumin.section02.enumtype;
 
 public enum Subjects {
     /* 설명. 만들어진 5개가 모두 객체임. 내부적으로 new 생성자를 활용해서 싱글톤 객체가 만들어짐 */

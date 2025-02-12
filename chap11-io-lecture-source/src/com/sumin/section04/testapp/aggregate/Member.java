@@ -25,6 +25,15 @@ public class Member implements Serializable { // 객체 입출력을 하기 위�
         this.accountStatus = accountStatus;
     }
 
+    /* 설명. 회원가입 시 입력받은 5개의 값으로 초기화하는 생성자 */
+    public Member(String id, String pwd, int age, String[] hobbies, BloodType bloodType) {
+        this.id = id;
+        this.pwd = pwd;
+        this.age = age;
+        this.hobbies = hobbies;
+        this.bloodType = bloodType;
+    }
+
     public String getId() {
         return id;
     }

@@ -1,18 +1,18 @@
-package com.sumin.sectio02.enumtype;
+package com.sumin.section02.enumtype;
 
 // 왜 생성자가 여러번 호출되는지???
 public class Application {
     public static void main(String[] args) {
 //        Subjects subject = new Subject();  우리가 enum 타입의 생성자를 직접 사용 X
-        Subjects subject1 = Subjects.JAVA; // JAVA 형 객체가 들어있음
-        Subjects subject2 = Subjects.HTML;
-        Subjects subject3 = Subjects.JDBC;
+        Subjects subject1 = Subjects.JAVA; // JAVA 형 객체가 들어있음.
+        // 호출 시 enum 안 필드의 모든 객체가 자동 생성된다 (중복 생성되지 않음. 싱글톤 개념)
+        Subjects subject2 = Subjects.HTML; // 이미 만들어진 객체의 참조
+        Subjects subject3 = Subjects.JAVA;
 
         /* 설명.
         *   1. 열거 타입으로 선언된 인스턴스는 싱글톤으로 관리되며 인스턴스가 각각 한 개임을 보장한다.
         *      작성한 순서에 따라 각각은 다른 인스턴스가 생성되며 최초 호출 시에 enum 의 생성자를 활용해
-        *      생성된다. (lazy singleton 개념)
-        *
+        *      생성된다. (lazy singleton 개념) 
         *
         *   설명.
         *    2. 단일 인스턴스를 보장하기에 == 비교가 가능하다 (동일 객체 비교)
