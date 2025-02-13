@@ -96,7 +96,7 @@ public class MemberRepository {
     }
 
     public Member selectMemberBy(int memNo) {
-    Member returnMember = null;
+    Member returnMember = null; // 불러온 Member 객체를 저장할 변수 선언
 
         for(Member member : memberList) {
             if(member.getMemNo() == memNo) {

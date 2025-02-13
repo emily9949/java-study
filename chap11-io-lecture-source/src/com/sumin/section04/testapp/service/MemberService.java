@@ -56,12 +56,12 @@ public class MemberService {
     }
 
     public Member findMemberForMod(int memNo) {
-        Member selectMember = mr.selectMemberBy(memNo);
+        Member selectMember = mr.selectMemberBy(memNo); // 조회된 멤버 객체를 담을 공간
 
         if (selectMember != null) { // 회원이 조회 되었을 때
             /* 설명. 조회된 회원을 그대로 반환해서 수정하면 Repository 의 컬렉션에 담긴 객체가 수정된다. */
             /* 설명. 따라서 우리는 사본의 개념을 만들어 Repository 의 컬렉션이 오염되지 않도록 할 것이다. */
-            Member newInstance = new Member();
+            Member newInstance = new Member();  // 객체를 수정할 사본 생성
             newInstance.setMemNo(selectMember.getMemNo());
             newInstance.setId(selectMember.getId());
             newInstance.setPwd(selectMember.getPwd());

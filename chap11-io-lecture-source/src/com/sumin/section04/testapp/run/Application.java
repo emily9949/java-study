@@ -42,7 +42,7 @@ public class Application {
                     break;
                 case 4:
                     Member selected = ms.findMemberForMod(chooseMemNo());
-                    if (selected == null) continue;
+                    if (selected == null) continue; // 예외처리 기능. 건너뛰고 while 처음으로 돌아간다.
                     ms.modifyMember(reform(selected));
                     break;
                 case 5:
