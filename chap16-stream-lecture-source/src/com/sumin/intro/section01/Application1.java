@@ -36,7 +36,7 @@ public class Application1 {
                                         .add("홍길동")
                                         .add("유관순")
                                         .add("윤봉길")
-                                        .build(); // stream 반환 
+                                        .build(); // stream 반환
         builderStream.forEach(System.out::println);
     }
 }
