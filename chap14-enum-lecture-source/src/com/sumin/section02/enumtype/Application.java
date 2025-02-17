@@ -3,7 +3,7 @@ package com.sumin.section02.enumtype;
 // 왜 생성자가 여러번 호출되는지???
 public class Application {
     public static void main(String[] args) {
-//        Subjects subject = new Subject();  우리가 enum 타입의 생성자를 직접 사용 X
+//        Subjects subject = new Subjects();  우리가 enum 타입의 생성자를 직접 사용 X
         Subjects subject1 = Subjects.JAVA; // JAVA 형 객체가 들어있음.
         // 호출 시 enum 안 필드의 모든 객체가 자동 생성된다 (중복 생성되지 않음. 싱글톤 개념)
         Subjects subject2 = Subjects.HTML; // 이미 만들어진 객체의 참조
@@ -35,10 +35,13 @@ public class Application {
         *       (상수필드들에 주입된 객체들을 순회할 수 있다.)
         *  */
         Subjects[] subjects = Subjects.values();
+
+        System.out.println(subjects[0].name());
         for(Subjects sub : subjects) {
             System.out.println(sub.toString()); // 나중에 문자열로 DB 에 보낸다
             System.out.println(sub.ordinal()); // 나중에 순서로 DB에 보낸다
             System.out.println(sub.name()); // 나중에 이름으로 DB 에 보낸다
+            System.out.println(sub);
             // enum 에 선언된 상수들의 순서를 인덱스 체계로 추출. (클래스 + 배열 느낌)
         }
 

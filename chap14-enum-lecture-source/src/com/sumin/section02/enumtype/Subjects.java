@@ -12,9 +12,9 @@ public enum Subjects {
         System.out.println("기본 생성자 실행됨... ");
     }
 
-    @Override
-    public String toString() {
-        return "@@@@" + this.name() + "@@@@";
-        // this.name() 은 호출된 객체 (예제에서는 Java.name() 과 동일)
-    }
+//    @Override
+//    public String toString() {
+//        return "@@@@" + this.name() + "@@@@";
+//        // this.name() 은 호출된 객체 (예제에서는 Java.name() 과 동일)
+//    }
 }

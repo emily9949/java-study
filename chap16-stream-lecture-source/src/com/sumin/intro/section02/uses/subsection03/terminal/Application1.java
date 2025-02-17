@@ -23,7 +23,7 @@ public class Application1 {
         System.out.println("min = " + min);
 
         int oddSum = IntStream.range(1, 10).filter(i -> i % 2 == 1) // 1-10까지의 홀수연산
-                                            .sum(); // 합계 
+                                            .sum(); // 합계
         System.out.println("oddSum = " + oddSum);
 
     }
