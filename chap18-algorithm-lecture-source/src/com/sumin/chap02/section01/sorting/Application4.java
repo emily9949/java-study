@@ -1,4 +1,4 @@
-package com.sumin.chap01.section01.sorting;
+package com.sumin.chap02.section01.sorting;
 
 import java.io.BufferedReader;
 import java.io.IOException;

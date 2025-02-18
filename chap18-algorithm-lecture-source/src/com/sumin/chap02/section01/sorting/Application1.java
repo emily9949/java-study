@@ -1,11 +1,9 @@
-package com.sumin.chap01.section01.sorting;
+package com.sumin.chap02.section01.sorting;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 import java.util.stream.IntStream;
 
 /* 수업목표. 버블 정렬을 이해할 수 있다. */
@@ -97,7 +95,7 @@ public class Application1 {
     public static void solution(int length, int[] arr) {
         for (int i = 0; i < length-1; i++) {
             System.out.println((i+1) + "번째 순회: " + Arrays.toString(arr));
-            for (int j = 0; j < length-1; j++) {
+            for (int j = 0; j < length-1-i; j++) {
                 if (arr[j] > arr[j+1]) {
 
                     /* 설명. j번째와 그 다음인 (j+1) 을 swap 시킴 */

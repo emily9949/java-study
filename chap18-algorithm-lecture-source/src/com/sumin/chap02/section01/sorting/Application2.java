@@ -1,5 +1,11 @@
-package com.sumin.chap01.section01.sorting;
+package com.sumin.chap02.section01.sorting;
 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /* 수업목표. 선택 정렬을 이해할 수 있다 */
 /* 설명. 선택 정렬(Selection Sort)
@@ -32,12 +38,32 @@ public class Application2 {
          *    - 64 42 34 29 28 12
          * */
 
+    public static void main(String[] args) {
+
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            int length = Integer.parseInt(br.readLine());
+
+            /* 설명. 3. Stream 활용 */
+            IntStream intStream = Arrays.stream(br.readLine().split(" ")) // stream 배열이 String으로 바뀐다.
+                    .mapToInt(x->Integer.parseInt(x));
+            int[] arr3 = intStream.toArray();
+
+            solution(length, arr3); // call by reference. 반환을 하지 않아도 같은 arr을 참조하고 있음
+
+            System.out.println("length = " + length);
+            System.out.println("arr = " + Arrays.toString(arr3));
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void solution(int length, int[] arr) {
-            for (int i = 0; i < length-1; i++) {
+            for (int i = 0; i < length-1; i++) { // 마지막은 비교하지 않아도 되니 배열 길이-1 만큼 비교
                 int maxIndex = i;
                 for (int j = i+1; j < length; j++) {
 
-                    if (arr[i] < arr[j]) {
+                    if (arr[i] < arr[j]) { // 제일 작은 값을 i번째 인덱스에 swap
                         maxIndex = j;
                         int temp = arr[i];
                         arr[i] = arr[maxIndex];

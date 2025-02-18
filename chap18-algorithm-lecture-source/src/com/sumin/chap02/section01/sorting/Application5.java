@@ -1,4 +1,4 @@
-package com.sumin.chap01.section01.sorting;
+package com.sumin.chap02.section01.sorting;
 
 /* 수업목표. 병합 정렬을 이해할 수 있다. */
 public class Application5 {
@@ -19,6 +19,19 @@ public class Application5 {
         int index1 = low;
         int index2 = median + 1;
 
-        while 
+
+        /* 설명. 좌측 인덱스가 남았을 때(마저 옮기기) */
+        while(index1 <= median) {
+            arr[k] = temp[index1];
+            k++;
+            index1++;
+        }
+
+        /* 설명. 우측 인덱스가 남았을 때(마저 옮기기) */
+        while(index2 <= high) {
+            arr[k] = temp[index2];
+            k++;
+            index2++;
+        }
     }
 }

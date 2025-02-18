@@ -1,4 +1,4 @@
-package com.sumin.chap01.section01.sorting;
+package com.sumin.chap02.section01.sorting;
 
 /* 수업목표. 삽입 정렬을 이해할 수 있다. */
 /* 설명.
